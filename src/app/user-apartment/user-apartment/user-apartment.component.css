@@ -1,0 +1,44 @@
+#intro {
+    /* background-image: url('../../../assets/232132132132131.jpeg'); */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: auto;
+  }
+
+  /* Height for devices larger than 576px */
+  /* @media (min-width: 992px) {
+    #intro {
+      margin-top: -58.59px;
+    }
+  } */
+
+  .navbar .nav-link {
+    color: #fff !important;
+  }
+  
+   
+.cardDiv{
+    margin-top:3%;
+    margin-left:3%;
+    box-shadow:  5px 5px 5px rgba(14, 2, 81, 0.6);
+    border-color: rgb(200, 200, 237);
+    width:40%;
+    float: left;
+    margin-bottom:3rem;
+
+}
+.mainCard{
+    width:90%;
+    /* margin:1%; */
+    height: auto;
+    margin-top:1rem;
+    
+    /* padding-bottom: 10%; */
+}
+.imgg{
+  width: 100%;
+  height: 300px;
+  /* padding-right:20px ; */
+}

@@ -1,0 +1,53 @@
+<div class="mainCard mx-auto">
+  <div class="card cardDiv" style="width: 25rem; background-color: rgba(203, 219, 248, 0.244);" *ngFor="let apartment of Apartment; let i = index" [attr.data-slide-to]="i" [class.active]="i === 0">
+    <div class="card mb-3" class=" ">
+      <!-- coursel -->
+      <div [id]="'carouselExample-' + i" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div
+            class="carousel-item"
+            *ngFor="let photo of apartment?.photos; let j = index"
+            [class.active]="j === activeSlideIndex[i]"
+          >
+            <img src="{{ photo }} " class="d-block w-100 imgg" alt="Slide {{ j + 1 }} " />
+          </div>
+        </div>
+        <a
+          [href]="'#carouselExample-' + i"
+          class="carousel-control-prev"
+          role="button"
+          data-slide="prev"
+          (click)="prevSlide(i); $event.preventDefault();"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a
+          [href]="'#carouselExample-' + i"
+          class="carousel-control-next"
+          role="button"
+          data-slide="next"
+          (click)="nextSlide(i); $event.preventDefault();"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{apartment.title}}</h5>
+      <p class="card-text">{{apartment.miniDescription}}.</p>
+    </div>
+    <ul class="list-group list-group-light list-group-medium p-2">
+      <li class="list-group-item px-4 py-2">ViewCount: {{apartment.viewsCount}}</li>
+      <li class="list-group-item px-4 py-2">City: {{apartment.city}}</li>
+      <li class="list-group-item px-4 py-2">Address: {{apartment.address}}</li>
+      <li class="list-group-item px-4 py-2">Area: {{apartment.area}}</li>
+      <li class="list-group-item px-4 py-2">BedRooms: {{apartment.bedrooms}}</li>
+      <li class="list-group-item px-4 py-2">BathRooms: {{apartment.bathrooms}}</li>
+    </ul>
+  </div>
+</div>
+
+
+
